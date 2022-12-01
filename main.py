@@ -10,7 +10,7 @@ def dft(s_lst):
         if round(xk.imag, 4) == 0:
             print("X{} = {}".format(k, round(xk.real, 4)))
         else:
-            print("X{} = {}+{}i".format(k, round(xk.real, 4), round(xk.imag, 4)))
+            print("X{} = {}+({}i)".format(k, round(xk.real, 4), round(xk.imag, 4)))
 
 
 def in_operate():
