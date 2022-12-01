@@ -7,8 +7,10 @@ def dft(s_lst):
         xk = 0
         for s in s_lst:
             xk += s * exp(-1j * 2*pi * k * s_lst.index(s) / _n)
-        print("X{} = {}".format(k, xk))
-    print('Note: cmath library writes complex numbers in "a+bj" form.')
+        if round(xk.imag, 4) == 0:
+            print("X{} = {}".format(k, round(xk.real, 4)))
+        else:
+            print("X{} = {}+{}i".format(k, round(xk.real, 4), round(xk.imag, 4)))
 
 
 def in_operate():
