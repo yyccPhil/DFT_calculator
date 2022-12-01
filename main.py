@@ -16,8 +16,10 @@ def in_operate():
     sample_lst = list()
     for i in i_lst:
         if "i" in i:
-            if i.index("i") == 0 or (not i[i.index("i") - 1].isdigit()):            # Make sure the imaginary part of a complex number has an integer.
-                sample_lst.append(complex(i.replace(" ", "").replace("i", "1j")))   # Replace the idiomatic imaginary unit "i" with the "j" recognized by the cmath library.
+            # Make sure the imaginary part of a complex number has an integer.
+            if i.index("i") == 0 or (not i[i.index("i") - 1].isdigit()):
+                # Replace the idiomatic imaginary unit "i" with the "j" recognized by the cmath library.
+                sample_lst.append(complex(i.replace(" ", "").replace("i", "1j")))
         else:
             sample_lst.append(int(i.replace(" ", "")))
     return sample_lst
