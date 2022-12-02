@@ -14,7 +14,8 @@ def dft(s_lst):
 
 
 def in_operate():
-    i_lst = input('Please enter your samples (split by "," | complex numbers in "a+bi" format):\n').split(",")
+    i_lst = input('Please enter your samples (split by "," | complex numbers in "a+bi" format):\n'
+                  '(e.g. 0, 0, 2, 3, 4, 0, 0, 0 / 1, i, -1, -i, 1, i, -1, -i)\n').split(",")
     sample_lst = list()
     for i in i_lst:
         if "i" in i:
